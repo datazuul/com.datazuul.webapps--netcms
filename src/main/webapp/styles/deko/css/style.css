@@ -1,0 +1,108 @@
+body {
+	font: normal 12px serif;
+}
+
+#legende
+{
+  display:none;
+}
+#wrap {
+	width: 760px;
+	background: #FFF url(../images/content.jpg) repeat-y center top;
+	margin: 10px auto;
+	text-align: left;
+}
+#header {
+	width: 760px;
+	height: 220px;
+	background: #FFF url(../images/header.jpg) no-repeat center top;
+	padding: 0px;
+	color: #000;
+}
+
+#header-links {
+	border: 0px;
+	font-size: 10px;
+	margin: 0px;
+	padding: 0px;
+	text-align: right;
+	width: 760px;
+}
+
+#header-links p {
+	margin: 0px 30px;
+	padding-top: 35px;
+}
+
+#header-menu {
+	border: 0px;
+	font-size: 10px;
+	margin: 0px;
+	padding: 0px;
+	text-align: center;
+	width: 760px;
+}
+
+#header-menu p {
+	font: bold 14px serif;
+	margin: 0px 30px;
+	padding-top: 95px;
+}
+
+#main {
+	float: left;
+	width: 500px;
+	padding: 0px 0px 0px 28px;
+	display: inline;
+}
+#main h1 {
+	font-size: 18px;
+}
+#main h2 {
+	font-size: 16px;
+}
+#main h3 {
+	font-size: 14px;
+}
+
+#content-wrap-1col {
+	float: left;
+	width: 700px;
+	padding: 0px 0px 0px 28px;
+	display: inline;
+}
+#content-wrap-1col h1 {
+	font-size: 18px;
+}
+#content-wrap-1col h2 {
+	font-size: 16px;
+}
+#content-wrap-1col h3 {
+	font-size: 14px;
+}
+
+#sidebar {
+	float: right;
+	width: 200px;
+	padding: 0px 25px 0px 2px;
+	margin: 0;
+}
+#sidebar a {
+	font: normal 10px serif;
+}
+#sidebar h1 {
+	font: bold 14px serif;
+}
+
+#footer {
+	background: #FFF url(../images/footer.jpg) no-repeat center top;
+	clear: both;
+	font: 10px serif;
+	width: 760px;
+	height: 70px;
+	text-align: center;	
+}
+#footer p {
+	margin: 0px 30px;
+	padding-top: 15px;
+}

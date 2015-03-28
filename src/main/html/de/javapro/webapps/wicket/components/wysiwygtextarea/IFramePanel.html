@@ -1,0 +1,51 @@
+<!-- Copyright 2007 Pixotec -  Licensed under the Apache License, Version 2.0 -->
+<html xmlns:wicket>
+  <head>
+    <wicket:head>
+      <script wicket:id="editorMain" language= "JavaScript" type= "text/javascript" src= "WysiwygTextarea.js" ></script>
+	</wicket:head>
+ </head>
+ <body>
+    <wicket:panel>
+<table width="750">
+<!-- <form action="form.php" name="edit" method="POST" id="edit" onsubmit="return submitForm();"> -->
+  <tr>
+    <td><a href="javascript:doEditorCommand('bold', '')"><img wicket:id="imgBold" src="images/bold.gif" width="25" height="24" alt="Bold" title="Bold"></a></td>
+    <td><a href="javascript:doEditorCommand('underline', '')"><img wicket:id="imgUnderline" src="images/underline.gif" width="25" height="24" alt="Underline" title="Underline"></a></td>
+    <td><a href="javascript:doEditorCommand('italic', '')"><img wicket:id="imgItalic" src="images/italic.gif" width="25" height="24" alt="Italic" title="Italic"></a></td>
+    <td><a href="javascript:doEditorCommand('justifyleft', '')"><img wicket:id="imgJustifyLeft" src="images/j_left.gif" width="25" height="24" alt="Align Left" title="Align Left"></a></td>
+    <td><a href="javascript:doEditorCommand('justifycenter', '')"><img wicket:id="imgJustifyCenter" src="images/j_center.gif" width="25" height="24" alt="Align Center" title="Align Center"></a></td>
+    <td><a href="javascript:doEditorCommand('justifyright', '')"><img wicket:id="imgJustifyRight" src="images/j_right.gif" width="25" height="24" alt="Align Right" title="Align Right"></a></td>
+    <td><a href="javascript:doEditorCommand('indent', '')"><img wicket:id="imgIndent" src="images/indent.gif" width="25" height="24" alt="Indent" title="Indent"></a></td>
+    <td><a href="javascript:doEditorCommand('outdent', '')"><img wicket:id="imgOutdent" src="images/outdent.gif" width="25" height="24" alt="Outdent" title="Outdent"></a></td>
+    <td><a href="javascript:doEditorCommand('undo', '')"><img wicket:id="imgUndo" src="images/undo.gif" width="25" height="24" alt="Undo" title="Undo"></a></td>
+    <td><a href="javascript:doEditorCommand('redo', '')"><img wicket:id="imgRedo" src="images/redo.gif" width="25" height="24" alt="Redo" title="Redo"></a></td>
+    <td width="100%" align="left">Shift+Enter for single line spacing</td>
+  </tr>
+  <tr>
+    <td colspan="12">
+<script language="JavaScript" type="text/javascript">
+<!--
+function submitForm() {
+  updateEditor('content');
+  return true;
+}
+//-->
+</script>
+
+<iframe wicket:id="iframe" id="editor" name="editor" width="300px" height="300px"></iframe>
+
+<!-- a hidden field that will hold everything that is typed in the textarea -->
+<input wicket:id="hiddeneditor" type="hidden" id="hiddeneditor" name="hiddeneditor" value="">
+
+    </td>
+  </tr>
+<!--
+<tr><td colspan="12"> <input type="submit" name="Submit" value="Submit"> </td></tr>
+</form>
+-->
+</table>
+
+    </wicket:panel>
+ </body>
+</html>

@@ -1,0 +1,156 @@
+<html>
+  <head>
+  <style>
+    body {
+      background: #DDD;
+      font-size: 12px;
+    }
+    input, textarea, td {
+      font-size: 12px;
+    }
+  </style>
+  <script language="javascript">
+  <!--
+  function ok() {
+    var newImage = {};
+    newImage.align = document.getElementById("align").value;
+    newImage.border = document.getElementById("border").value;
+    newImage.description = document.getElementById("description").value;
+    newImage.height = document.getElementById("height").value;
+    newImage.hspace = document.getElementById("hspace").value;
+    newImage.title = document.getElementById("title").value;
+    newImage.vspace = document.getElementById("vspace").value;
+    newImage.width = document.getElementById("width").value;
+
+    newImage.originalUrl = document.getElementById("originalUrl").value;
+    newImage.previewUrl = document.getElementById("previewUrl").value;
+    
+    window.returnValue = newImage;
+    window.close();
+    opener.imageDialog_callback(this);
+  }
+  
+  function cancel() {
+    window.close();
+    opener.imageDialog_callback(this);
+  }
+  
+  function imageSelectionDialog_callback(dialog) {
+    var rv = dialog.returnValue;
+    if (rv != null) {
+      var img = document.getElementById("selectedImage");
+      img.setAttribute("src", rv.thumbnailUrl);    
+      
+      var originalUrl = document.getElementById("originalUrl");
+      originalUrl.value = rv.originalUrl;
+      
+      var previewUrl = document.getElementById("previewUrl");
+      previewUrl.value = rv.previewUrl;
+
+      var imgDesc = document.getElementById("description");
+      imgDesc.value = rv.description;    
+
+      var imgTitle = document.getElementById("title");
+      imgTitle.value = rv.title;
+      
+      if (rv.height != null) {
+        var imgHeight = document.getElementById("height");
+        imgHeight.value = rv.height;
+        imgHeight.disabled = true;
+      }
+      if (rv.width != null) {
+        var imgWidth = document.getElementById("width");
+        imgWidth.value = rv.width;
+        imgWidth.disabled = true;
+      }
+    }
+  }
+  
+  //-->
+  </script>
+  </head>
+<body>
+<form name="dialog">
+<table>
+  <tr valign="top">
+    <td>
+      <table>
+        <tr valign="middle">
+          <span wicket:id="pnlImageUrl"></span>
+
+<wicket:fragment wicket:id="fragWithoutImageDialog">
+          <td align="right">Bild-URL:</td>
+          <td><input type="text" name="originalUrl" id="originalUrl" value="" size="25"/>
+            <input type="hidden" name="previewUrl" id="previewUrl" value=""/>
+          </td>
+</wicket:fragment>
+
+<wicket:fragment wicket:id="fragWithImageDialog">
+          <td align="right">Bild:</td>
+          <td><img id="selectedImage" wicket:id="imgSelected" src="res/noimage.jpg" align="left"/>
+            <a href="#" wicket:id="lnkSelectImage">Bild auswählen...</a>
+            <input type="hidden" name="originalUrl" id="originalUrl" value=""/>
+            <input type="hidden" name="previewUrl" id="previewUrl" value=""/>
+          </td>
+</wicket:fragment>
+
+        </tr>
+        <tr valign="middle">
+          <td align="right">Bild-Titel:</td>
+          <td><input type="text" name="title" id="title" value="" size="25"/></td>
+        </tr>
+        <tr valign="middle">
+          <td align="right">Bild-Beschreibung:</td>
+          <td><textarea name="description" id="description" cols="25" rows=8"></textarea></td>
+        </tr>
+        <tr valign="middle">
+          <td align="right">Ausrichtung:</td>
+          <td><select size="1" id="align" onchange="document.getElementById('testImage').align=this.value;">
+            <!--  
+            <option value="top">Text obenbündig zur Grafik</option>
+            <option value="middle">Text mittig zur Grafik</option>
+            <option value="bottom">Text untenbündig zur Grafik</option>
+            <option value="texttop">Text obenbündig zur Grafik</option>
+            <option value="absmiddle">Text absolut mittig zur Grafik</option>
+            <option value="absbottom">Text absolut untenbündig zur Grafik</option>
+            -->
+            <option value="left">Text fließt rechts um Grafik</option>
+            <option value="right">Text fließt links um Grafik</option>
+            </select>
+          </td>
+        </tr>
+        <tr valign="middle">
+          <td align="right">Größe<br>(Breite x Höhe):</td>
+          <td><input type="text" name="width" id="width" value="" size="3"/> x <input type="text" name="height" id="height" value="" size="3"/></td>
+        </tr>
+        <tr valign="middle">
+          <td align="right">Rahmenstärke:</td>
+          <td><input type="text" name="border" id="border" value="" size="3" onchange="document.getElementById('testImage').border=this.value;"/></td>
+        </tr>
+        <tr valign="middle">
+          <td align="right">Abstand zum Text<br>(links und rechts):</td>
+          <td><input type="text" name="hspace" id="hspace" value="" size="3" onchange="document.getElementById('testImage').hspace=this.value;"/></td>
+        </tr>
+        <tr valign="middle">
+          <td align="right">Abstand zum Text<br>(oben und unten):</td>
+          <td><input type="text" name="vspace" id="vspace" value="" size="3" onchange="document.getElementById('testImage').vspace=this.value;"/></td>
+        </tr>
+      </table>
+    </td>
+    <td>
+      <div style="border: solid 1px black; padding: 5px;">
+        <img id="testImage" wicket:id="imgTest" src="res/temple.jpg" align="left"/>
+        Gallia est omnis divisa in partes tres, quarum unam incolunt Belgae, aliam Aquitani, tertiam qui ipsorum lingua Celtae, nostra Galli appellantur. Hi omnes lingua, institutis, legibus inter se differunt. Gallos ab Aquitanis Garumna flumen, a Belgis Matrona et Sequana dividit. Horum omnium fortissimi sunt Belgae, propterea quod a cultu atque humanitate provinciae longissime absunt, minimeque ad eos mercatores saepe commeant atque ea quae ad effeminandos animos pertinent, important, proximique sunt Germanis, qui trans Rhenum incolunt, quibuscum continenter bellum gerunt.
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">&nbsp;</td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center"><input type="button" value="ok" onclick="ok();"> <input type="button" value="abbrechen" onclick="cancel();"></td>
+  </tr>
+</table>
+</form>
+</body>
+</html>

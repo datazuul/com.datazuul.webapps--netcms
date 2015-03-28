@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<wicket:panel>
+<form name="selectImage">
+<input type="hidden" name="description" id="description" value=""/>
+<input type="hidden" name="height" id="height" value=""/>
+<input type="hidden" name="hiddenOriginalUrl" id="hiddenOriginalUrl" wicket:id="hiddenOriginalUrl"/>
+<input type="hidden" name="hiddenPreviewUrl" id="hiddenPreviewUrl" wicket:id="hiddenPreviewUrl"/>
+<input type="hidden" name="hiddenThumbnailUrl" id="hiddenThumbnailUrl" wicket:id="hiddenThumbnailUrl"/>
+<input type="hidden" name="hiddenTitle" id="hiddenTitle" wicket:id="hiddenTitle" />
+<input type="hidden" name="width" id="width" value=""/>
+
+<div id="categoryNavigator">
+<img src="images/kms/folder.png" align="absmiddle"/>  <span wicket:id="pnlCategoryNavigator"/>
+</div>
+
+<div id="images">
+<div class="imageContainer" wicket:id="images">
+  <div class="image"><a href=#" wicket:id="lnkSelect"><img src="#" wicket:id="imgThumbnail" /></a></div>
+  <div class="title"><span wicket:id="lblImageTitle">[Bild-Titel]</span></div>
+</div>
+</div>
+
+<div id="subcategories">
+  <ul class="sidemenu">
+    <li wicket:id="subcategories"><a href="ViewCategoryPage.html" wicket:id="lnkViewCategory"><span wicket:id="lblCategoryName">[Unterkategoriename]</span></a></li>
+  </ul>
+</div>
+
+<span wicket:id="pnlFeedback" style="clear:both;"/>
+
+<div style="clear:both;padding-top: 10px;">
+  <div style="float:left;">
+    <table>
+      <tr valign="top">
+        <td>
+          <img wicket:id="imgThumbnailSelected" />
+        </td>
+        <td>
+          Titel: <span wicket:id="lblImageTitleSelected">[Bild-Titel]</span><br/>
+          Autor/Urheber: <span wicket:id="lblImageAuthorSelected">[Bild-Autor]</span><br/>
+          Beschreibung: <span wicket:id="lblImageDescriptionSelected">[Bild-Beschreibung]</span>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <div style="float:right;">
+    <input type="button" value="ok" onclick="ok();" style="width: 100px;"/><br/>
+    <input type="button" value="abbrechen" onclick="cancel();" style="margin-top: 5px; width: 100px;"/>
+  </div>
+</div>
+
+</form>
+</wicket:panel>
+

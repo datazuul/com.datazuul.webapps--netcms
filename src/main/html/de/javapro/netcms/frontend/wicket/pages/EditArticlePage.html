@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wicket:extend>
+
+<div id="content-wrap-1col">
+<h1>Artikel "<span wicket:id="lblArticleTitle">[Artikel-Titel]</span>" bearbeiten</h1>
+
+      <form wicket:id="articleInputForm">
+        <p><label>Titel</label>
+        <input type="text" size="70" wicket:id="title"/></p>
+        
+        <p><span wicket:id="htmlContent">[Textarea comes here]</span></p>
+  
+        <p><input class="button" wicket:id="btnCancel" type="submit" value="abbrechen"/>
+        <input class="button" type="submit" value="speichern"/></p>
+      </form>
+</div>
+</wicket:extend>

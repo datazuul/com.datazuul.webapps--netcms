@@ -1,0 +1,38 @@
+.editable {
+	border: solid 1px red;
+	margin-bottom: 3px;
+	margin-top: 3px;
+	padding: 2px;
+}
+.cms-icons {
+	border-bottom: dotted 1px #ccc;
+	clear: both;
+	text-align: right;
+	width: 100%;
+}	
+img.cmsIcon {
+    border: 0px solid red;
+    margin: 1px;
+	padding: 0px;
+}
+#legende {
+	background: #FFF;
+	border: solid 1px black;
+	margin: 5px;
+	padding: 5px;
+	position: absolute;
+	text-align: left;
+	width: 150px;
+	z-index: 100;
+}
+#legende td {
+	padding: 3px;
+}
+#legende th {
+	padding: 3px;
+	text-align: left;
+}
+
+#wrap {
+	z-index: 1;
+}

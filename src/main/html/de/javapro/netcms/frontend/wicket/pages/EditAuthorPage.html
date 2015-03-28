@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wicket:extend>
+<div id="content-wrap-1col">
+  <h1>Autor "<span wicket:id="lblTitle">[Titel]</span>" bearbeiten</h1>
+  
+  <form wicket:id="form">
+    <p><label>Familienname</label>
+    <input wicket:id="surname" type="text" size="40" /></p>
+    
+    <p><label>Vorname(n)</label>
+    <input wicket:id="firstname" type="text" size="40" /></p>
+
+    <p><label>Geburtstag</label>
+    <input wicket:id="dayOfBirth" type="text" size="15" /></p>
+
+    <p><label>Todestag</label>
+    <input wicket:id="dayOfDeath" type="text" size="15" /></p>
+
+    <p><input class="button" wicket:id="btnCancel" type="submit" value="abbrechen"/> 
+    <input class="button" wicket:id="btnSave" type="submit" value="speichern"/></p>
+  </form>
+  
+</div>
+</wicket:extend>

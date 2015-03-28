@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wicket:extend>
+<div id="content-wrap-1col">
+<div align="center" style="background-color: #edfdce; padding: 5px;">
+
+<div class="search-form">
+  <form wicket:id="searchForm" class="clearfix" action="#" role="search">
+    <fieldset>
+      <div id="searchfield">
+       <input wicket:id="query" type="text" value="Suche" class="text clearField clearFieldBlurred" id="searchbox" name="s" rel="Search" onfocus="this.value=''"/>
+      </div>
+      <input type="submit" class="submit" value=""/>
+     </fieldset>
+ 
+ <span wicket:id="searchTargetGroup">
+  <span wicket:id="targets">
+    <input type="radio" wicket:id="radio"/>
+    <span wicket:id="target"><br/></span><br/>
+  </span>
+</span>
+
+	</form>
+</div>
+</div>
+
+<h1>Suchergebnisse</h1>
+<h2>in Kategorie-Titeln</h2>
+<p><span wicket:id="categoryHits">
+<div class="hit">
+  <img src="styles/envision/images/folder.gif" align="absmiddle"/> <b>Kategorie:</b> <a href="ViewCategoryPage.html" wicket:id="lnkViewCategory"><span wicket:id="lblCategoryName">[Highlighted Kategoriename]</span></a>
+</div>
+</span></p>
+
+<h2>in Artikel-Texten</h2>
+<p><span wicket:id="articleHits">
+<div class="hit">
+  <a href="ViewCategoryPage.html" wicket:id="lnkViewCategory"><span wicket:id="lblHitTitle">[Titel des Treffer-Objektes]</span></a><br/>
+  ... <span wicket:id="lblHighlightedText">[Text excerpt]</span> ...<br/>
+  <span wicket:id="pnlCategoryNavigator"/>
+</div>
+</span></p>
+
+<h2>in Bildern</h2>
+<table style="margin-left: 10px;">
+  <tr valign="top">
+    <td>
+<span wicket:id="imageHits">
+<div class="hit">
+  <div class="imageContainer editable">
+    <div class="image"><a href="#" wicket:id="lnkViewImage"><img src="#" wicket:id="imgThumbnail" border="0" /></a></div>
+    <div class="title" wicket:id="lblTitle">[Bild-Titel]</div>
+  </div>  
+</div>
+</span>
+    </td>
+  </tr>
+</table>
+</div>
+</wicket:extend>

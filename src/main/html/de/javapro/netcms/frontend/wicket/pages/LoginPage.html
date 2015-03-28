@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wicket:extend>
+
+<div id="content-wrap-1col">
+<form wicket:id="form">
+  <span wicket:id="feedback">Ausgabe von (Fehler-)Meldungen</span>
+  
+  <p>
+  <label>Benutzername</label><font color="red">*</font>
+  <input class="textfield" type="text" name="username" wicket:id="username" value="" size="20"/>
+  
+  <label>Passwort</label><font color="red">*</font>
+  <input class="textfield" type="password" name="password" wicket:id="password" value="" size="20"/>
+  <br />
+  <br />	
+  <input type="submit" name="ok" value="   OK   " class="button"/> <input type="submit" name="cancel" value="Abbrechen" class="button" />
+  </p>	
+</form>
+      
+</div>
+</wicket:extend>

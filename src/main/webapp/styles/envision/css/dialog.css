@@ -1,0 +1,20 @@
+/* Top Elements */
+* { margin: 0; padding: 0; }
+
+body {
+	background: #FFF;
+	font: 80%/1.7em Verdana, Tahoma, arial, sans-serif;
+	color: #555; 
+}
+
+/* links */
+a, a:visited {
+	text-decoration: none;
+	color: #2180BC;
+	background: inherit;
+}
+a:hover {
+	color: #88ac0b;
+	background: inherit;
+	text-decoration: underline;
+}

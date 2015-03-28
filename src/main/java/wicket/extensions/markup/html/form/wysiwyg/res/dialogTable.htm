@@ -1,0 +1,49 @@
+<html>
+  <head>
+  <style>
+    body {
+      background: #DDD;
+    }
+  </style>
+  <script language="javascript">
+  <!--
+  function ok() {
+    var newTable = {};
+    newTable.headers = document.getElementById("headers").checked;
+    newTable.cols = document.getElementById("cols").value;
+    newTable.rows = document.getElementById("rows").value;
+    
+    window.returnValue = newTable;
+    window.close();
+    opener.tableDialog_callback(this);
+  }
+  function cancel() {
+    window.close();
+    opener.tableDialog_callback(this);
+  }
+  //-->
+  </script>
+  </head>
+<body>
+<form name="dialog">
+<table>
+  <tr>
+    <td>Spaltenüberschriften:</td>
+    <td><input type="checkbox" name="headers" id="headers" checked="true"/></td>
+  </tr>
+  <tr>
+    <td>Spalten:</td><td><input type="text" name="cols" id="cols" value="2"/></td>
+  </tr>
+  <tr>
+    <td>Zeilen:</td><td><input type="text" name="rows" id="rows" value="3"/></td>
+  </tr>
+  <tr>
+    <td colspan="2">&nbsp;</td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center"><input type="button" value="ok" onclick="ok();"> <input type="button" value="abbrechen" onclick="cancel();"></td>
+  </tr>
+</table>
+</form>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<wicket:extend>
+              
+<div id="content-wrap-2col">
+
+<div id="sidebar">
+
+<div class="search-form">
+  <form wicket:id="searchForm" class="clearfix" action="#" role="search">
+    <fieldset>
+      <div id="searchfield">
+       <input wicket:id="query" type="text" id="searchbox" name="s" rel="Search" class="text clearField clearFieldBlurred" onfocus="if(this.value=='Suchen...') this.value='';" onblur="if(this.value=='') this.value='Suchen...';" value="Search...">
+      </div>
+      <input type="submit" class="submit" value="go"/>
+     </fieldset>
+ 
+ <span wicket:id="searchTargetGroup">
+  <span wicket:id="targets">
+    <input type="radio" wicket:id="radio"/>
+    <span wicket:id="target"><br/></span><br/>
+  </span>
+</span>
+
+	</form>
+</div>
+
+<h1>Unterkategorien</h1>
+  <ul class="sidemenu">
+    <li id="Subcategories" wicket:id="subcategories"><a href="ViewCategoryPage.html" wicket:id="lnkViewCategory"><span wicket:id="lblCategoryName">[Unterkategoriename]</span></a></li>
+  </ul>
+
+</div>
+
+<div id="main">
+	
+<div class="latestList" style="clear:both; height: 165px;">
+<h1 class="latestListHeader">Die neuesten Bilder:</h1>
+<div wicket:id="pnlGallery"></div>
+</div>
+
+<div class="latestList" style="clear:both;">
+<h1 class="latestListHeader">Die neuesten Artikel:</h1>
+
+<div wicket:id="articleHits">
+<div class="hit">
+  <h1><span wicket:id="lblHitTitle">[Titel des Treffer-Objektes]</span></h1>
+  <span class="hitLocation">in <span wicket:id="pnlCategoryNavigator"/></span><br/>
+  <div class="hitText" wicket:id="lblHighlightedText">[Text excerpt]</div>
+  <a href="ViewCategoryPage.html" wicket:id="lnkViewCategory">lesen ...</a>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</wicket:extend>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wicket:extend>
+<div id="content-wrap-2col">
+
+<div id="sidebar">
+
+<div class="search-form">
+  <form wicket:id="searchForm" class="clearfix" action="#" role="search">
+    <fieldset>
+      <div id="searchfield">
+       <input wicket:id="query" type="text" value="Suche" class="text clearField clearFieldBlurred" id="searchbox" name="s" rel="Search" onfocus="this.value=''"/>
+      </div>
+      <input type="submit" class="submit" value=""/>
+     </fieldset>
+ 
+ <span wicket:id="searchTargetGroup">
+  <span wicket:id="targets">
+    <input type="radio" wicket:id="radio"/>
+    <span wicket:id="target"><br/></span><br/>
+  </span>
+</span>
+
+	</form>
+</div>
+
+<h1>Unterkategorien</h1>
+<div class="subcategories editable">
+  <span wicket:id="pnlActionsSubcategories"/>
+  <ul class="sidemenu">
+    <span id="Subcategories" wicket:id="subcategories">
+    <li><a href="ViewCategoryPage.html" wicket:id="lnkViewCategory"><span wicket:id="lblCategoryName">[Unterkategoriename]</span></a></li>
+    </span>
+  </ul>
+</div>
+
+</div>
+
+<div id="main">
+  <div class="category editable">
+    <span wicket:id="pnlActionsCategory"/>
+    <div id="categoryNavigator">
+    <span wicket:id="pnlCategoryNavigator"/>
+	</div>
+	
+    <div class="articles editable">
+      <span wicket:id="pnlActionsArticles"/>
+      <span wicket:id="articles">
+      <div class="article editable">
+        <span wicket:id="pnlActionsArticle"/>
+        <h1><span wicket:id="lblArticleTitle">[Artikel-Titel]</span></h1>
+        <div class="articleContent"><span wicket:id="lblArticleContent">[Artikel-Inhalt]</span></div>
+        <div style="clear:both;"></div>
+      </div>
+      </span>
+    </div>
+    
+    <div wicket:id="imagesSection">
+      <h1>Bilder</h1>
+      <div class="images editable">
+        <span wicket:id="pnlActionsImages"/>
+        <table>
+          <tr valign="top">
+            <td>
+              <div wicket:id="pnlGallery" class="images editable"></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+</wicket:extend>

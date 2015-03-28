@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wicket:extend>
+<wicket:fragment wicket:id="fragImage"><a href="#" wicket:id="lnkPortraitOriginal"><img src="#" class="image" wicket:id="imgPreview" border="0" align="left" /></a></wicket:fragment>
+<wicket:fragment wicket:id="fragNoImage"><img class="cmsIcon" src="images/noimage.jpg" alt="Kein Bild vorhanden" title="Kein Bild vorhanden"/></wicket:fragment>
+
+<div id="content-wrap-1col">
+<h1><span wicket:id="lblTitle">[Seiten-Titel]</span></h1>
+<table width="100%">
+  <tr valign="top">
+    <td>&nbsp;</td>
+    <td width="1%">
+      <span wicket:id="pnlImage">[Bild?]</span>
+    </td>
+    <td>&nbsp;</td>
+    <td width="99%">
+<em>Familienname:</em> <span wicket:id="lblSurname">[Familienname]</span><br/>
+<em>Vorname(n):</em> <span wicket:id="lblFirstname">[Vorname(n)]</span><br/>
+<em>Geburtsdatum:</em> * <span wicket:id="lblDayOfBirth">[Geburtsdatum]</span><br/>
+<em>Todesdatum:</em> &dagger; <span wicket:id="lblDayOfDeath">[Todesdatum]</span>
+    </td>
+  </tr>
+</table>
+
+<h1>Texte des Autors</h1>
+<span wicket:id="pnlActionsTexts"/>
+<table>
+  <tr valign="middle">
+    <th>&nbsp;</th>
+    <th>Download</th>
+    <th>&nbsp;</th>
+    <th>Titel</th>
+    <th>&nbsp;</th>
+    <th>Beschreibung</th>
+  </tr>
+  <tr valign="top" wicket:id="textList">
+    <td></td>
+    <td align="center"><a href="#" wicket:id="lnkView"><img class="cmsIcon" src="images/pdf.gif" alt="Dokument herunterladen" title="Dokument herunterladen"/></a></td>
+    <td></td>
+    <td><span wicket:id="lblTitle">[Titel]</span></td>
+    <td></td>
+    <td><span wicket:id="lblDescription">[Beschreibung]</span></td>
+  </tr>
+</table>
+
+<h1>Artikel des Autors</h1>
+<table>
+  <tr valign="middle">
+    <th>&nbsp;</th>
+    <th>Titel</th>
+    <th>&nbsp;</th>
+    <th>eingeordnet in Themenbereich</th>
+  </tr>
+  <tr valign="top" wicket:id="articleList">
+    <td></td>
+    <td><a href="ViewCategoryPage.html" wicket_id="lnkView"><span wicket:id="lblTitle">[Titel]</span></a></td>
+    <td></td>
+    <td><span wicket:id="lblCategoryTitle">[Titel]</span></td>
+  </tr>
+</table>
+
+<h1>Bilder des Autors</h1>
+<div class="images editable">
+  <span xxxwicket:id="pnlActionsImages"/>
+  <table>
+    <tr valign="top">
+      <td>
+        <div class="imageContainer editable" wicket:id="imageList">
+          <span wicket:id="pnlActionsImage"/>
+          <div class="image"><a href="#" wicket:id="lnkOriginal"><img src="#" wicket:id="imgThumbnail" border="0" /></a></div>
+          <div class="title" wicket:id="lblImageTitle">[Bild-Titel]</div>
+        </div>
+      </td>
+    </tr>
+  </table>
+</div>
+
+</div>
+</wicket:extend>

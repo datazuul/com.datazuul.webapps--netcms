@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wicket:extend>
+  <wicket:fragment wicket:id="fragImage"><a href="#" wicket:id="lnkOriginal"><img src="#" class="image" wicket:id="imgPreview" border="0" /></a></wicket:fragment>
+  <wicket:fragment wicket:id="fragUpload">
+    <p><label>Datei:</label>
+    <input type="file" id="upload" wicket:id="fileInput"/><input class="button" type="submit" value="hochladen" wicket:id="btnUpload"/></p>
+    <!--    <span xxxwicket:id="progress">[Ajax-Upload-Fortschrittsbalken]</span> -->
+  </wicket:fragment>
+
+<div id="content-wrap-1col">
+<h1>Bild "<span wicket:id="lblTitle">[Bild-Titel]</span>" bearbeiten</h1>
+<span wicket:id="feedback">[feedback messages]</span>
+<form wicket:id="imageInputForm">
+  <p><span wicket:id="pnlFile"></span></p>
+
+  <p><label>Titel:</label>
+  <input type="text" size="70" wicket:id="title"/></p>
+        
+  <p><label>Beschreibung:</label>
+  <textarea cols="70" rows="5" wicket:id="description">[Beschreibung]</textarea></p>
+
+  <p><input class="button" wicket:id="btnCancel" type="submit" value="abbrechen"/>
+  <input class="button" wicket:id="btnSave" type="submit" value="speichern"/></p>
+</form>
+</div>
+</wicket:extend>

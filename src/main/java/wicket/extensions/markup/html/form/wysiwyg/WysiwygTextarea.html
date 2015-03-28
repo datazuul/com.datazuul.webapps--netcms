@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wicket:panel>
+<input type="hidden" wicket:id="html" />
+
+<table width="300" style="background: #DDD; border: solid 1px black;">
+  <tr id="toolbar">
+    <td>
+      <select id="selBlockFormat" size="1" align="absmiddle" onchange="formatParagraph(this);">
+      <option value="Normal">Standard</option>
+      <option value="<pre>">Vorformatierter Text</option>
+      <option value="<h1>">Überschrift 1</option>
+      <option value="<h2>">Überschrift 2</option>
+      <option value="<h3>">Überschrift 3</option>
+      <option value="<h4>">Überschrift 4</option>
+      <option value="<h5>">Überschrift 5</option>
+      <option value="<h6>">Überschrift 6</option>
+      </select>
+    </td>
+<!--
+ removed from all buttons:
+ onmousedown=""
+ onmouseup=""
+ onmouseout="drawButtonUp(this);"
+ onmouseover="drawButtonDown(this);"
+-->
+    <td><img wicket:id="btnBold" src="res/btnBold_up.gif" id="btnBold"
+     onclick="editorCommand('bold', '');"
+     border="0" width="25" height="24" alt="Bold" title="Bold" /></td>
+     
+    <td><img wicket:id="btnItalic" src="res/btnItalic_up.gif" id="btnItalic"
+     onclick="editorCommand('italic', '');"
+     border="0" width="25" height="24" alt="Italic" title="Italic" /></td>
+     
+    <td><img wicket:id="btnUnderline" src="res/btnUnderline_up.gif" id="btnUnderline"
+     onclick="editorCommand('underline', '');"
+     border="0" width="25" height="24" alt="Underline" title="Underline" /></td>
+
+    <td><img wicket:id="btnJustifyLeft" src="res/btnJustifyleft_up.gif" id="btnJustifyLeft"
+     onclick="editorCommand('justifyleft', '');"
+     border="0" width="25" height="24" alt="Align left" title="Align left" /></td>
+
+    <td><img wicket:id="btnJustifyCenter" src="res/btnJustifyCenter_up.gif" id="btnJustifyCenter"
+     onclick="editorCommand('justifycenter', '');"
+     border="0" width="25" height="24" alt="Align Center" title="Align Center" /></td>
+
+    <td><img wicket:id="btnJustifyRight" src="res/btnJustifyRight_up.gif" id="btnJustifyRight"
+     onclick="editorCommand('justifyright', '');"
+     border="0" width="25" height="24" alt="Align Right" title="Align Right" /></td>
+
+    <td><img wicket:id="btnSubscript" src="res/btnSubscript_up.gif" id="btnSubscript"
+     onclick="editorCommand('Subscript', '');"
+     border="0" width="25" height="24" alt="Subscript" title="Subscript" /></td>
+
+    <td><img wicket:id="btnSuperscript" src="res/btnSuperscript_up.gif" id="btnSuperscript"
+     onclick="editorCommand('Superscript', '');"
+     border="0" width="25" height="24" alt="Superscript" title="Superscript" /></td>
+
+    <td><img wicket:id="btnUnorderedList" src="res/btnUnorderedList_up.gif" id="btnUnorderedList"
+     onclick="editorCommand('InsertUnorderedList', '');"
+     border="0" width="25" height="24" alt="Insert unordered list" title="Insert unordered list" /></td>
+
+    <td><img wicket:id="btnOrderedList" src="res/btnOrderedList_up.gif" id="btnOrderedList"
+     onclick="editorCommand('InsertOrderedList', '');"
+     border="0" width="25" height="24" alt="Insert ordered list" title="Insert ordered list" /></td>
+
+    <td><img wicket:id="btnIndent" src="res/btnIndent_up.gif" id="btnIndent"
+     onclick="editorCommand('indent', '');"
+     border="0" width="25" height="24" alt="Indent" title="Indent" /></td>
+
+    <td><img wicket:id="btnOutdent" src="res/btnOutdent_up.gif" id="btnOutdent"
+     onclick="editorCommand('outdent', '');"
+     border="0" width="25" height="24" alt="Outdent" title="Outdent" /></td>
+
+    <td><img wicket:id="btnUndo" src="res/btnUndo_up.gif" id="btnUndo"
+     onclick="editorCommand('undo', '');"
+     border="0" width="25" height="24" alt="Undo" title="Undo" /></td>
+
+    <td><img wicket:id="btnRedo" src="res/btnRedo_up.gif" id="btnRedo"
+     onclick="editorCommand('redo', '');"
+     border="0" width="25" height="24" alt="Redo" title="Redo" /></td>
+
+    <td><img wicket:id="btnTable" src="res/btnTable_up.gif" id="btnTable"
+     onclick="openTableDialog();"
+     onmouseup="drawButtonDown(this);"
+     border="0" width="25" height="24" alt="Insert table" title="Insert table" /></td>
+
+    <td><a href="#" wicket:id="lnkDialogImage"><img wicket:id="btnImage" src="res/btnImage_up.gif" id="btnImage"
+     onmouseup="drawButtonDown(this);"
+     border="0" width="25" height="24" alt="Insert image" title="Insert image" /></a></td>
+  </tr>
+  <tr>
+    <td colspan="17" style="padding: 4px;">
+<script language= "JavaScript" type= "text/javascript" >
+<!--
+  insertEditor(dataFieldId, width, height);
+//-->
+</script>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="16" style="padding: 4px;">Shift+Enter for single line spacing</td>
+    <td align="right"><img wicket:id="btnHTML" src="res/btnHTML_up.gif" id="btnHTML"
+     onclick="toggleView();" border="0" width="25" height="24" alt="HTML Sourcecode" title="HTML Sourcecode" /></td>
+  </tr>    
+</table>
+
+</wicket:panel>

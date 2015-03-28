@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wicket:extend>
+  <wicket:fragment wicket:id="fragImage"><a href="#" wicket:id="lnkOriginal"><img src="#" class="image" wicket:id="imgPreview" border="0" /></a></wicket:fragment>
+
+<div id="content-wrap-1col">
+<h1>Bild "<span wicket:id="lblTitle">[Bild-Titel]</span>" löschen</h1>
+<span wicket:id="feedback">[feedback messages]</span>
+
+<p><span wicket:id="pnlFile"></span></p>
+
+<form wicket:id="imageInputForm">
+  <p><input class="button" wicket:id="btnCancel" type="submit" value="abbrechen"/>
+  <input class="button" wicket:id="btnDelete" type="submit" value="löschen"/></p>
+</form>
+</div>
+</wicket:extend>

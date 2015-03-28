@@ -1,0 +1,49 @@
+/* Image Gallery */
+div#images {
+	background-color: white;
+	border: solid 1px black;
+	float: left;
+	overflow: auto;
+	padding: 5px;
+	height: 280px;
+	width: 500px;
+}
+div#subcategories {
+	background-color: white;
+	border: solid 1px black;
+	float: right;
+	overflow: auto;
+	padding: 5px;
+	height: 280px;
+	width: 230px;
+}
+
+div.imageContainer {
+	float: left;
+	margin: 2px;
+	min-height: 116px;
+	width: 122px;
+	text-align: center;
+}	
+div.imageContainer div.image {
+	background: #FFF;
+	clear: both;
+	border: solid 1px #AAA;
+	margin: 5px;
+	height: 102px;
+	width: 102px;
+	padding: 4px;
+	text-align: center;
+}
+div.imageContainer div.image img {
+	margin-top: auto;
+}
+div.imageContainer div.title {
+	clear: both;
+	margin:0px;
+	padding:0px;
+	font-size: 10px;
+	font-weight: bold;
+	line-height: 11px;
+	width: 100%;
+}

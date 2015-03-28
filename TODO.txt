@@ -1,0 +1,7 @@
+- Bild einfügen reparieren
+- Bild Felder (description, taken/made by, width, height, license)
+- Bild Info-Seite (mit Icon in Gallerie)
+- Focus auf erstes Formularfeld
+- Querverweise/Links auf andere Kategorien/Artikel
+done - Top-Level categories (Impressum, About, ...)
+- sortieren von Kategorien

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<wicket:extend>
+              
+<div id="content-wrap-2col">
+
+<div id="sidebar">
+
+<h1>Suchbox</h1>
+<form action="#" class="searchform" wicket:id="searchForm">
+<p><input name="search_query" class="textbox" type="text" wicket:id="query" /> <input name="search" class="button" value="suchen" type="submit" /></p>
+<span wicket:id="searchTargetGroup">
+  <span wicket:id="targets">
+    <input type="radio" wicket:id="radio"/>
+    <span wicket:id="target"><br/></span><br/>
+  </span>
+</span>
+</form>
+
+<h1>Lexikon</h1>
+<ul class="sidemenu">
+<li id="Subcategories" wicket:id="subcategories">
+<strong><a href="ViewCategoryPage.html" wicket:id="lnkViewCategory"><span wicket:id="lblCategoryName">[Unterkategoriename]</span></a></strong>
+<br/><span id="SubSubCategories" wicket:id="subSubCategories">
+<a href="ViewCategoryPage.html" wicket:id="lnkViewSubCategory"><span wicket:id="lblSubCategoryName">[Unterkategoriename]</span></a><span wicket:id="separator">, </span>
+</span>
+</li>
+</ul>
+
+</div>
+
+<div id="main">
+<span wicket:id="articles">
+  <div class="article editable">
+    <span wicket:id="pnlActionsArticle"/>
+    <h1><span wicket:id="lblArticleTitle">[Artikel-Titel]</span></h1>
+    <p class="content"><span wicket:id="lblArticleContent">[Artikel-Inhalt]</span></p>
+  </div>
+</span>
+
+<a name="Autoren"></a>
+<h1>Autoren von A-Z</h1>
+
+<p>
+<a href="#"><img src="images/alphabet/round/a.png" class="icon" /></a>
+<a href="#"><img src="images/alphabet/round/b.png" class="icon" /></a>
+<a href="#"><img src="images/alphabet/round/c.png" class="icon" /></a>
+<a href="#"><img src="images/alphabet/round/d.png" class="icon" /></a>
+<a href="#"><img src="images/alphabet/round/e.png" class="icon" /></a>
+<a href="#"><img src="images/alphabet/round/f.png" class="icon" /></a>
+<a href="#"><img src="images/alphabet/round/g.png" class="icon" /></a>
+<a href="#"><img src="images/alphabet/round/h.png" class="icon" /></a>
+<a href="#"><img src="images/alphabet/round/i.png" class="icon" /></a>
+<a href="#"><img src="images/alphabet/round/j.png" class="icon" /></a>
+<a href="#"><img src="images/alphabet/round/k.png" class="icon" /></a>
+<a href="#"><img src="images/alphabet/round/l.png" class="icon" /></a>
+<a href="#"><img src="images/alphabet/round/m.png" class="icon" /></a><br />
+<a href="#"><img src="images/alphabet/round/n.png" class="icon" /></a>
+<a href="#"><img src="images/alphabet/round/o.png" class="icon" /></a>
+<a href="#"><img src="images/alphabet/round/p.png" class="icon" /></a>
+<a href="#"><img src="images/alphabet/round/q.png" class="icon" /></a>
+<a href="#"><img src="images/alphabet/round/r.png" class="icon" /></a>
+<a href="#"><img src="images/alphabet/round/s.png" class="icon" /></a>
+<a href="#"><img src="images/alphabet/round/t.png" class="icon" /></a>
+<a href="#"><img src="images/alphabet/round/u.png" class="icon" /></a>
+<a href="#"><img src="images/alphabet/round/v.png" class="icon" /></a>
+<a href="#"><img src="images/alphabet/round/w.png" class="icon" /></a>
+<a href="#"><img src="images/alphabet/round/x.png" class="icon" /></a>
+<a href="#"><img src="images/alphabet/round/y.png" class="icon" /></a>
+<a href="#"><img src="images/alphabet/round/z.png" class="icon" /></a></p>
+
+
+<a name="Neu"></a>
+<h1>Neu eingetroffen</h1>
+
+<h3>Bücher und Texte</h3>
+<ul>
+	<li><a href="#">Friedrich Schiller</a>: "<a href="#">Die
+	Leiden des jungen Werther</a>" (26.09.2007, <a href="#">pixotec</a>)</li>
+	<li>Wilhelm Busch: "Das Bad am Samstagabend" (26.09.2007, pixotec)</li>
+</ul>
+
+<h3>Bilder</h3>
+<p><a href="http://getfirefox.com/"><img
+	src="images/firefox-gray.jpg" width="100" height="120" alt="firefox"
+	class="float-left" /></a> <a href="http://getfirefox.com/"><img
+	src="images/firefox-gray.jpg" width="100" height="120" alt="firefox"
+	class="float-left" /></a> <a href="http://getfirefox.com/"><img
+	src="images/firefox-gray.jpg" width="100" height="120" alt="firefox"
+	class="float-left" /></a></p>
+</div>
+
+</div>
+</wicket:extend>

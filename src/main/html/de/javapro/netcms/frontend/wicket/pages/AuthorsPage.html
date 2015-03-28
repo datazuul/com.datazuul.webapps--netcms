@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wicket:extend>
+<div id="content-wrap-1col">
+  <div style="padding: 0px 10px;">
+  <h1 class="first">Suchbox</h1>
+  <form action="#" class="searchform" wicket:id="searchForm">
+    <p><input name="search_query" class="textbox" type="text" wicket:id="query" /> <input name="search" class="button" value="suchen" type="submit" /></p>
+    <span wicket:id="searchTargetGroup">
+      <span wicket:id="targets">
+        <input type="radio" wicket:id="radio"/>
+        <span wicket:id="target"><br/></span><br/>
+      </span>
+    </span>
+  </form>
+
+  <h1>Autoren &amp; Werke</h1>
+  <div class="authors editable">
+    <span wicket:id="pnlActionsAuthorList"/>
+    <table border="0" width="100%">
+      <tr>
+        <th></th>
+        <th>Name, Vorname(n)</th>
+        <th>* Geburtstag</th>
+        <th>&dagger; Todestag</th>
+      </tr>
+      <tr valign="middle" wicket:id="authorList">
+        <td><span wicket:id="pnlActionsAuthor"/></td>
+        <td><a href="ViewAuthorPage.html" wicket:id="lnkView"><span wicket:id="lblName">[Name]</span></a></td>
+        <td><span wicket:id="lblDayOfBirth">[Geburtstag]</span></td>
+        <td><span wicket:id="lblDayOfDeath">[Todestag]</span></td>
+      </tr>
+    </table>
+  </div>
+  </div>
+</div>
+</wicket:extend>
